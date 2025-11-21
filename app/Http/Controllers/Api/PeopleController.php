@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StorePeopleRequest;
-use App\Http\Requests\UpdatePeopleRequest;
 use App\Models\People;
 use App\Http\Resources\PeopleResource;
 use Illuminate\Http\Request;
@@ -27,36 +25,12 @@ class PeopleController extends Controller
             $query->where('location', '<=', (int) $request->get('max_distance'));
         }
 
-        $paginator = $query->paginate(20);
+        $perPage = (int) $request->get('per_page', 20);
+        $perPage = $perPage > 0 && $perPage <= 100 ? $perPage : 20;
+        $paginator = $query->paginate($perPage);
         $paginator->getCollection()->transform(fn ($item) => new PeopleResource($item));
         return response()->json($paginator);
     }
 
-    public function store(StorePeopleRequest $request)
-    {
-        $people = People::create($request->validated());
-        $people->load(['pictures' => function ($q) { $q->orderBy('sort_order'); }]);
-        return response()->json(new PeopleResource($people), 201);
-    }
-
-    public function show(People $people)
-    {
-        $people->load(['pictures' => function ($q) {
-            $q->orderBy('sort_order');
-        }]);
-        return response()->json(new PeopleResource($people));
-    }
-
-    public function update(UpdatePeopleRequest $request, People $people)
-    {
-        $people->update($request->validated());
-        $people->load(['pictures' => function ($q) { $q->orderBy('sort_order'); }]);
-        return response()->json(new PeopleResource($people));
-    }
-
-    public function destroy(People $people)
-    {
-        $people->delete();
-        return response()->json(null, 204);
-    }
+    // removed unused store/show/update/destroy methods
 }

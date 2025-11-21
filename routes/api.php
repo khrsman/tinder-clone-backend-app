@@ -6,7 +6,6 @@ use App\Http\Controllers\Api\LikeController;
 
 Route::prefix('people')->group(function () {
     Route::get('/', [PeopleController::class, 'index']);
-    Route::post('/', [PeopleController::class, 'store']);
 });
 
 Route::prefix('likes')->group(function () {
