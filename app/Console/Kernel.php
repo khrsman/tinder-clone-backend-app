@@ -12,7 +12,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        // $schedule->command('inspire')->hourly();
+        // use a disposable email to avoid spam
+        $schedule->command('popular:check --threshold=50 --notify=khrsman@yopmail.com')->hourly()->onOneServer(); 
     }
 
     /**
