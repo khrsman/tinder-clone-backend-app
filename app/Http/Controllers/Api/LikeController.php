@@ -85,6 +85,6 @@ class LikeController extends Controller
 
         $last->delete();
 
-        return response()->json(['rewound' => $payload]);
+        return response()->json(['rewind' => $payload]);
     }
 }
