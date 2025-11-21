@@ -345,26 +345,26 @@ INSERT INTO public.migrations VALUES (5, '2025_11_21_000030_add_bio_to_people_ta
 -- Data for Name: people; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.people VALUES (1, 'Sophia', 21, 1001, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Runner');
-INSERT INTO public.people VALUES (2, 'Emma', 22, 1002, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Dancer');
-INSERT INTO public.people VALUES (3, 'Olivia', 23, 1003, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Traveler');
-INSERT INTO public.people VALUES (4, 'Ava', 24, 1004, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Coffee lover');
-INSERT INTO public.people VALUES (5, 'Isabella', 25, 1005, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Bookworm');
-INSERT INTO public.people VALUES (6, 'Mia', 26, 1006, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Foodie');
-INSERT INTO public.people VALUES (7, 'Amelia', 27, 1007, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Yoga lover');
-INSERT INTO public.people VALUES (8, 'Harper', 28, 1008, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Musician');
-INSERT INTO public.people VALUES (9, 'Evelyn', 29, 1009, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Photographer');
-INSERT INTO public.people VALUES (10, 'Abigail', 30, 1010, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Movie buff');
-INSERT INTO public.people VALUES (11, 'Ella', 31, 1011, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Fitness junkie');
-INSERT INTO public.people VALUES (12, 'Elizabeth', 32, 1012, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Animal lover');
-INSERT INTO public.people VALUES (13, 'Camila', 33, 1013, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Adventurer');
-INSERT INTO public.people VALUES (14, 'Luna', 34, 1014, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Chef');
-INSERT INTO public.people VALUES (15, 'Sofia', 35, 1015, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Tech geek');
-INSERT INTO public.people VALUES (16, 'Emily', 36, 1016, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Artist');
-INSERT INTO public.people VALUES (17, 'Avery', 37, 1017, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Movie lover');
-INSERT INTO public.people VALUES (18, 'Mila', 38, 1018, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Open minded');
-INSERT INTO public.people VALUES (19, 'Aria', 39, 1019, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Nature lover');
-INSERT INTO public.people VALUES (20, 'Scarlett', 40, 1020, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Social butterfly');
+INSERT INTO public.people VALUES (1, 'Sophia', 21, 10, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Runner');
+INSERT INTO public.people VALUES (2, 'Emma', 22, 20, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Dancer');
+INSERT INTO public.people VALUES (3, 'Olivia', 23, 15, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Traveler');
+INSERT INTO public.people VALUES (4, 'Ava', 24, 3, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Coffee lover');
+INSERT INTO public.people VALUES (5, 'Isabella', 25, 4, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Bookworm');
+INSERT INTO public.people VALUES (6, 'Mia', 26, 20, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Foodie');
+INSERT INTO public.people VALUES (7, 'Amelia', 27, 10, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Yoga lover');
+INSERT INTO public.people VALUES (8, 'Harper', 28, 13, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Musician');
+INSERT INTO public.people VALUES (9, 'Evelyn', 29, 15, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Photographer');
+INSERT INTO public.people VALUES (10, 'Abigail', 30, 40, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Movie buff');
+INSERT INTO public.people VALUES (11, 'Ella', 31, 35, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Fitness junkie');
+INSERT INTO public.people VALUES (12, 'Elizabeth', 32, 22, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Animal lover');
+INSERT INTO public.people VALUES (13, 'Camila', 33, 10, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Adventurer');
+INSERT INTO public.people VALUES (14, 'Luna', 34, 24, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Chef');
+INSERT INTO public.people VALUES (15, 'Sofia', 35, 25, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Tech geek');
+INSERT INTO public.people VALUES (16, 'Emily', 36, 11, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Artist');
+INSERT INTO public.people VALUES (17, 'Avery', 37, 13, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Movie lover');
+INSERT INTO public.people VALUES (18, 'Mila', 38, 7, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Open minded');
+INSERT INTO public.people VALUES (19, 'Aria', 39, 20, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Nature lover');
+INSERT INTO public.people VALUES (20, 'Scarlett', 40, 35, '2025-11-21 15:35:18', '2025-11-21 15:35:18', 'Social butterfly');
 
 
 --
