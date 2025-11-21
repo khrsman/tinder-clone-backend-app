@@ -21,6 +21,7 @@ services:
       - storage_data:/var/www/html/storage
       - cache_data:/var/www/html/bootstrap/cache
     entrypoint: ["/usr/local/bin/app-entrypoint.sh"]
+    command: []
 
   db:
     image: postgres:15
