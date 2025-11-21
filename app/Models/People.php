@@ -15,6 +15,7 @@ class People extends Model
         'name',
         'age',
         'location',
+        'bio',
     ];
 
     public function pictures()

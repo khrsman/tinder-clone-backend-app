@@ -1,0 +1,40 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    ports:
+      - "8000:80"
+    environment:
+      APP_ENV: local
+      APP_DEBUG: "true"
+      APP_URL: http://localhost:8000
+      DB_CONNECTION: pgsql
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: tinder_clone
+      DB_USERNAME: postgres
+      DB_PASSWORD: TndrCloneAppDB!x9
+    depends_on:
+      - db
+    volumes:
+      - .:/var/www/html
+      - storage_data:/var/www/html/storage
+      - cache_data:/var/www/html/bootstrap/cache
+    entrypoint: ["/usr/local/bin/app-entrypoint.sh"]
+
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: tinder_clone
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: TndrCloneAppDB!x9
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data/pgdata
+volumes:
+  pgdata:
+  storage_data:
+  cache_data:
