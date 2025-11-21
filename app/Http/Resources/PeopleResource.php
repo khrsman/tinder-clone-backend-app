@@ -9,7 +9,7 @@ class PeopleResource extends JsonResource
     public function toArray($request): array
     {
         return [
-            'id' => 'op'.(string) $this->id,
+            'id' => $this->id,
             'name' => $this->name,
             'age' => $this->age,
             'bio' => $this->bio,

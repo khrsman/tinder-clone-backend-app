@@ -20,4 +20,5 @@ Route::prefix('people')->group(function () {
 Route::prefix('likes')->group(function () {
     Route::get('/', [LikeController::class, 'index']);
     Route::post('/', [LikeController::class, 'store']);
+    Route::post('/rewind', [LikeController::class, 'rewind']);
 });
