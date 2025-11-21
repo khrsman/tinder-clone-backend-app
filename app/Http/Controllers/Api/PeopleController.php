@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StorePersonRequest;
-use App\Http\Requests\UpdatePersonRequest;
+use App\Http\Requests\StorePeopleRequest;
+use App\Http\Requests\UpdatePeopleRequest;
 use App\Models\People;
 use Illuminate\Http\Request;
 
@@ -29,7 +29,7 @@ class PeopleController extends Controller
         return response()->json($query->paginate(20));
     }
 
-    public function store(StorePersonRequest $request)
+    public function store(StorePeopleRequest $request)
     {
         $people = People::create($request->validated());
         return response()->json($people, 201);
@@ -43,7 +43,7 @@ class PeopleController extends Controller
         return response()->json($people);
     }
 
-    public function update(UpdatePersonRequest $request, People $people)
+    public function update(UpdatePeopleRequest $request, People $people)
     {
         $people->update($request->validated());
         return response()->json($people);

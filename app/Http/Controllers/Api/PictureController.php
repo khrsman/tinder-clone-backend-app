@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StorePeoplePhotoRequest;
+use App\Http\Requests\StorePictureRequest;
 use App\Models\Picture;
 use App\Models\People;
 
@@ -15,7 +15,7 @@ class PictureController extends Controller
         return response()->json($pictures);
     }
 
-    public function store(StorePeoplePhotoRequest $request, People $people)
+    public function store(StorePictureRequest $request, People $people)
     {
         $data = $request->validated();
         $data['people_id'] = $people->id;

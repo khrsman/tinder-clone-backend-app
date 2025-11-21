@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdatePersonRequest extends FormRequest
+class UpdatePeopleRequest extends FormRequest
 {
     public function authorize(): bool
     {
@@ -17,7 +17,7 @@ class UpdatePersonRequest extends FormRequest
             'name' => ['sometimes', 'string', 'max:255'],
             'age' => ['sometimes', 'integer', 'min:18', 'max:120'],
             'location' => ['sometimes', 'integer', 'min:0'],
+            'bio' => ['sometimes', 'nullable', 'string'],
         ];
     }
 }
-

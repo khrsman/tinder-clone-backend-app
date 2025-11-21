@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StorePeoplePhotoRequest extends FormRequest
+class StorePictureRequest extends FormRequest
 {
     public function authorize(): bool
     {
@@ -19,4 +19,3 @@ class StorePeoplePhotoRequest extends FormRequest
         ];
     }
 }
-
